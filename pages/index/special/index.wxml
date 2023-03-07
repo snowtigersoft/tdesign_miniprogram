@@ -1,0 +1,8 @@
+<view class="demo-desc" style="margin: 48rpx 32rpx 32rpx">报告类型</view>
+
+<t-radio-group t-class="horizontal-box" value="{{value}}" bind:change="onChange">
+  <view wx:for="{{3}}" wx:key="index" class="card {{value == index ? 'card--active' : ''}}">
+    <t-icon wx:if="{{value == index}}" name="check" t-class="card__icon" />
+    <t-radio value="{{index}}" label="单选" icon="none" borderless />
+  </view>
+</t-radio-group>
